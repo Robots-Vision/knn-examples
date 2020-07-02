@@ -11,3 +11,15 @@ The intuition behind the KNN algorithm is one of the simplest of all the supervi
 ![](https://minerandodados.com.br/wp-content/uploads/2019/12/image-50.png)
 ## Required DataSets for this repository
 * [Link de download do dataset - Dogs and Cats](https://t.driptransact2.com/c/eyJhY2NvdW50X2lkIjoiNDc2ODQyOSIsImRlbGl2ZXJ5X2lkIjoiemJlYWQ0c252MHZrMDZoZjV3aGgiLCJ1cmwiOiJodHRwczovL3d3dy5nZXRkcmlwLmNvbS9zdWJzY3JpYmVycy90dW02bHpocTFiM3VxYW04bzkwcC9mb3Jtcy8yMTA3NzMyNi9hY3RpdmF0ZT9fX3M9dHVtNmx6aHExYjN1cWFtOG85MHAifQ)
+
+# Pacotes utilizados
+
+### Scikit-learn library
+```
+pip install -U scikit-learn
+```
+
+### Imutils
+```
+pip install imutils
+```

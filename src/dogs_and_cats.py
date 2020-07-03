@@ -1,5 +1,5 @@
 # USAGE
-# python knn_classifier.py --dataset ../assets/kaggle_dogs_vs_cats
+# python dogs_and_cats.py --dataset ../assets/kaggle_dogs_vs_cats
 
 # import the necessary packages
 from sklearn.neighbors import KNeighborsClassifier
@@ -34,10 +34,12 @@ def extract_color_histogram(image, bins=(8, 8, 8)):
     # return the flattened histogram as the feature vector
     return hist.flatten()
 
+
+
 # construct the argument parse and parse the arguments
 ap = argparse.ArgumentParser()
 ap.add_argument("-d", "--dataset", required=True, help="path to input dataset")
-ap.add_argument("-k", "--neighbors", type=int, default=1, help="# of nearest neighbors for classification")
+ap.add_argument("-k", "--neighbors", type=int, default=3, help="# of nearest neighbors for classification")
 ap.add_argument("-j", "--jobs", type=int, default=1, help="# of jobs for k-NN distance (-1 uses all available cores)")
 
 args = vars(ap.parse_args())
@@ -106,6 +108,7 @@ model = KNeighborsClassifier(n_neighbors=args["neighbors"], n_jobs=args["jobs"])
 model.fit(trainRI, trainRL)
 acc = model.score(testRI, testRL)
 print("[INFO] raw pixel accuracy: {:.2f}%".format(acc * 100))
+
 
 # train and evaluate a k-NN classifer on the histogram
 # representations
